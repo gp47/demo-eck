@@ -1,4 +1,4 @@
-# Demo-eck
+# Demo-ECK
 
 ## Summary
 
