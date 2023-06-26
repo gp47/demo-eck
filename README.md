@@ -32,11 +32,11 @@ kubectl apply -f src/elasticsearch.yaml
 ### Request an Access
 
 ```
-kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
+kubectl -n elasticsearch get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
 ```
 then
 ```
-kubectl port-forward svc/elasticsearch-es-http 9200
+kubectl -n elasticsearch port-forward svc/elasticsearch-es-http 9200
 ```
 
 
@@ -49,11 +49,11 @@ kubectl apply -f src/kibana.yaml
 ### Access Kibana
 
 ```
-kubectl get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
+kubectl -n elasticsearch get secret elasticsearch-es-elastic-user -o go-template='{{.data.elastic | base64decode}}'
 ```
 then
 ```
-kubectl port-forward svc/kibana-kb-http 5601
+kubectl -n elasticsearch port-forward svc/kibana-kb-http 5601
 ```
 
 

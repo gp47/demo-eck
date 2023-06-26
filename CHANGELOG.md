@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- extend with kibana deployment
+- extend deployment with kibana
+- more parameter in es and kibana deployment
 
 
 ## [0.1.0] - 2023-06-26
